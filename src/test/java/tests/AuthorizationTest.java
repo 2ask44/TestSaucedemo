@@ -17,7 +17,7 @@ public class AuthorizationTest extends BaseTest  {
         authorizationPage.enterLogin(Config.login);
         System.out.println("Шаг 3 - Введение пароля");
         authorizationPage.enterPassword(Config.password);
-        System.out.println("Шаг 4 - Клик кнопки");
+        System.out.println("Шаг 4 - Клик кнопки ");
         authorizationPage.clickBtnLogin();
         }
 
