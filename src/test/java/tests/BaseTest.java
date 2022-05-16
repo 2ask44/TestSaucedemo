@@ -21,7 +21,7 @@ public class BaseTest {
     /**
      * Выполнение метода перед каждым запуском тестов
      */
-    @BeforeClass
+    @BeforeClass(description = "Настройка браузера")
     public void init() {
         setUp();
     }
@@ -29,7 +29,7 @@ public class BaseTest {
     /**
      * Выполнение метода после каждого закрытия тестов
      */
-    @AfterClass
+    @AfterClass(description = "Закрытие браузера")
     public void tearDown(){
         Selenide.closeWebDriver();
     }
