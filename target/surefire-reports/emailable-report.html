@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Surefire suite</th></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">35 157</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.AddProductToСartTest</td><td><a href="#m0">Case2</a></td><td rowspan="1">1652779925682</td><td rowspan="1">26</td></tr><tr class="failedodd"><td rowspan="1">tests.DeleteProductToСartTest</td><td><a href="#m1">Case4</a></td><td rowspan="1">1652779932135</td><td rowspan="1">2</td></tr><tr class="failedeven"><td rowspan="1">tests.RegistrationProductTest</td><td><a href="#m2">Case3</a></td><td rowspan="1">1652779932148</td><td rowspan="1">2</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.AuthorizationTest</td><td><a href="#m3">Case1</a></td><td rowspan="1">1652779925795</td><td rowspan="1">6253</td></tr></tbody>
+</table>
+<h2>Surefire test</h2><h3 id="m0">tests.AddProductToСartTest#Case2</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: No webdriver is bound to current thread: 31. You need to call open(url) first.
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getWebDriver(WebDriverThreadLocalContainer.java:121)
+	at com.codeborne.selenide.WebDriverRunner.getWebDriver(WebDriverRunner.java:87)
+	at com.codeborne.selenide.impl.StaticDriver.getWebDriver(StaticDriver.java:51)
+	at com.codeborne.selenide.impl.BySelectorCollection.getElement(BySelectorCollection.java:49)
+	at com.codeborne.selenide.impl.CollectionElement.getWebElement(CollectionElement.java:46)
+	at com.codeborne.selenide.commands.ToWebElement.execute(ToWebElement.java:19)
+	at com.codeborne.selenide.commands.ToWebElement.execute(ToWebElement.java:13)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:155)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:75)
+	at com.sun.proxy.$Proxy5.toWebElement(Unknown Source)
+	at com.codeborne.selenide.impl.ElementFinder.getSearchContext(ElementFinder.java:121)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:104)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:99)
+	at com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsInteractable(WebElementSource.java:139)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:24)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:16)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:155)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:133)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:85)
+	at com.sun.proxy.$Proxy5.click(Unknown Source)
+	at pages.ProductsPage.addProduct(ProductsPage.java:16)
+	at steps.Steps.clickBtnAddProduct(Steps.java:38)
+	at tests.AddProductToСartTest.Case2(AddProductToСartTest.java:24)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.DeleteProductToСartTest#Case4</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: No webdriver is bound to current thread: 31. You need to call open(url) first.
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getWebDriver(WebDriverThreadLocalContainer.java:121)
+	at com.codeborne.selenide.WebDriverRunner.getWebDriver(WebDriverRunner.java:87)
+	at com.codeborne.selenide.impl.StaticDriver.getWebDriver(StaticDriver.java:51)
+	at com.codeborne.selenide.impl.BySelectorCollection.getElement(BySelectorCollection.java:49)
+	at com.codeborne.selenide.impl.CollectionElement.getWebElement(CollectionElement.java:46)
+	at com.codeborne.selenide.commands.ToWebElement.execute(ToWebElement.java:19)
+	at com.codeborne.selenide.commands.ToWebElement.execute(ToWebElement.java:13)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:155)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:75)
+	at com.sun.proxy.$Proxy5.toWebElement(Unknown Source)
+	at com.codeborne.selenide.impl.ElementFinder.getSearchContext(ElementFinder.java:121)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:104)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:99)
+	at com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsInteractable(WebElementSource.java:139)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:24)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:16)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:155)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:133)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:85)
+	at com.sun.proxy.$Proxy5.click(Unknown Source)
+	at pages.ProductsPage.addProduct(ProductsPage.java:16)
+	at steps.Steps.clickBtnAddProduct(Steps.java:38)
+	at tests.DeleteProductToСartTest.Case4(DeleteProductToСartTest.java:24)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.RegistrationProductTest#Case3</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: No webdriver is bound to current thread: 31. You need to call open(url) first.
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getWebDriver(WebDriverThreadLocalContainer.java:121)
+	at com.codeborne.selenide.WebDriverRunner.getWebDriver(WebDriverRunner.java:87)
+	at com.codeborne.selenide.impl.StaticDriver.getWebDriver(StaticDriver.java:51)
+	at com.codeborne.selenide.impl.ElementFinder.getSearchContext(ElementFinder.java:120)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:104)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:99)
+	at com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsInteractable(WebElementSource.java:139)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:24)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:16)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:155)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:133)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:85)
+	at com.sun.proxy.$Proxy5.click(Unknown Source)
+	at pages.BasketPage.clickBtnCheckout(BasketPage.java:20)
+	at steps.Steps.clickBtnCheckout(Steps.java:53)
+	at tests.RegistrationProductTest.Case3(RegistrationProductTest.java:27)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.AuthorizationTest#Case1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

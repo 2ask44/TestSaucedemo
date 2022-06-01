@@ -17,7 +17,6 @@ public class BaseTest {
         Configuration.browserSize = "1920x1080";
         Configuration.headless = false;
     }
-
     /**
      * Выполнение метода перед каждым запуском тестов
      */

@@ -13,7 +13,7 @@ public class BasketPage {
 
     public void clickBtnContinue() {
         btnContinue.click();
-        sleep(5000);
+       // sleep(5000);
     }
 
     public OrderingPage clickBtnCheckout() {
@@ -23,7 +23,7 @@ public class BasketPage {
 
     public CheckoutPage clickBtnRemove() {
         btnRemove.click();
-        sleep(5000);
+       // sleep(5000);
         return new CheckoutPage();
     }
 }

@@ -1,46 +1,35 @@
 package tests;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.*;
-import settings.Config;
+import steps.Steps;
 
-import static com.codeborne.selenide.Selenide.open;
+import java.io.IOException;
 
-public class RegistrationProductTest extends BaseTest  {
+public class RegistrationProductTest extends BaseTest {
 
     String clientFirstname = "Георгий";
     String clientLastname = "Жигарев";
     String clientPostalCode = "156000";
+    Steps steps = new Steps();
 
-    @Test
-    public void Case3() {
-        // Предусловия
-        System.out.println("Предусловие 1 - Открытие Сайта");
-        open(Config.baseUrl);
-        System.out.println("Предусловие 2 - Введение логина");
-        AuthorizationPage authorizationPage = new AuthorizationPage();
-        authorizationPage.enterLogin(Config.login);
-        System.out.println("Предусловие 3 - Введение пароля");
-        authorizationPage.enterPassword(Config.password);
-        System.out.println("Предусловие 4 - Клик кнопки");
-
-        ProductsPage productsPage = authorizationPage.clickBtnLogin();
-        System.out.println("Предусловие 5 - Добавить товар");
-        productsPage.addProduct(0);
-        System.out.println("Предусловие 6 - Перейти в корзину");
-
-        BasketPage basketPage = productsPage.showBasket();
-        System.out.println("Шаг 1 - Нажать на кнопку Checkout");
-        OrderingPage orderingPage = basketPage.clickBtnCheckout();
-        System.out.println("Шаг 2 - Ввод полей");
-        orderingPage.enterFirstname(clientFirstname);
-        orderingPage.enterLastname(clientLastname);
-        orderingPage.enterPostname(clientPostalCode);
-        System.out.println("Шаг 3 - Нажать на кнопку Continue");
-        CheckoutPage checkoutPage = orderingPage.clickBtnContinue();
-        System.out.println("Шаг 4 - Нажать на кнопку Finish");
-        checkoutPage.clickBtnFinish();
+    @BeforeTest(description = "Предусловие")
+    public  void precondition() {
+        steps.openSite();
+        steps.enterLogin();
+        steps.enterPassword();
+        steps.clickBtnLogin();
+        steps.clickBtnAddProduct();
+        steps.showBasket();
     }
+
+    @Test(description = "Кейс №3:Оформение товара")
+    public void Case3() {
+        steps.clickBtnCheckout();
+        steps.enterFields(clientFirstname, clientLastname, clientPostalCode);
+        steps.clickBtnContinueOrderingPage();
+        steps.clickBtnFinish();
+            }
 
 }
 

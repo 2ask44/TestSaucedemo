@@ -13,11 +13,11 @@ public class CheckoutPage {
 
     public void clickBtnFinish() {
         btnFinish.click();
-        sleep(5000);
+       // sleep(5000);
     }
 
     public void clickBtnContinue() {
         btnContinue.click();
-        sleep(5000);
+       // sleep(5000);
     }
 }

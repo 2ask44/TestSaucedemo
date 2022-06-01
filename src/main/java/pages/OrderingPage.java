@@ -27,7 +27,7 @@ public class OrderingPage {
 
     public CheckoutPage clickBtnContinue() {
         btnContinue.click();
-        sleep(5000);
+       // sleep(5000);
         return new CheckoutPage();
     }
 }

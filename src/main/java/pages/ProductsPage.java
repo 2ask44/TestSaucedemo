@@ -14,12 +14,12 @@ public class ProductsPage {
     public void addProduct(int index) {
         SelenideElement btnAdd = productsArray.get(0).$(By.id("add-to-cart-sauce-labs-backpack"));
         btnAdd.click();
-        sleep(5000);
+       // sleep(5000);
     }
 
     public BasketPage showBasket() {
         basket.click();
-        sleep(5000);
+        //sleep(5000);
         return new BasketPage();
     }
 }

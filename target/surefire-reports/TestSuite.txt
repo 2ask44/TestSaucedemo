@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 36.121 s <<< FAILURE! - in TestSuite
+tests.AddProductToСartTest.Case2  Time elapsed: 0.076 s  <<< FAILURE!
+java.lang.IllegalStateException: No webdriver is bound to current thread: 31. You need to call open(url) first.
+	at tests.AddProductToСartTest.Case2(AddProductToСartTest.java:24)
+
+tests.DeleteProductToСartTest.Case4  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.IllegalStateException: No webdriver is bound to current thread: 31. You need to call open(url) first.
+	at tests.DeleteProductToСartTest.Case4(DeleteProductToСartTest.java:24)
+
+tests.RegistrationProductTest.Case3  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.IllegalStateException: No webdriver is bound to current thread: 31. You need to call open(url) first.
+	at tests.RegistrationProductTest.Case3(RegistrationProductTest.java:27)
+

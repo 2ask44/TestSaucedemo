@@ -1,32 +1,32 @@
 package tests;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.*;
 import settings.Config;
+import steps.Steps;
+
+import java.io.IOException;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class AddProductToСartTest extends BaseTest  {
+public class AddProductToСartTest extends BaseTest {
+    Steps steps = new Steps();
 
-    @Test
+    @BeforeTest(description = "Предусловие")
+    public void precondition()  {
+        steps.openSite();
+        steps.enterLogin();
+        steps.enterPassword();
+        steps.clickBtnLogin();
+    }
+
+    @Test(description = "Кейс №2:Добавление товара в корзину")
     public void Case2() {
-        // Предусловия
-        System.out.println("Предусловие 1 - Открытие Сайта");
-        open(Config.baseUrl);
-        System.out.println("Предусловие 2 - Введение логина");
-        AuthorizationPage authorizationPage = new AuthorizationPage();
-        authorizationPage.enterLogin(Config.login);
-        System.out.println("Предусловие 3 - Введение пароля");
-        authorizationPage.enterPassword(Config.password);
-        System.out.println("Предусловие 4 - Клик кнопки");
+        steps.clickBtnAddProduct();
+        steps.showBasket();
+        steps.clickBtnContinue();
 
-        ProductsPage productsPage = authorizationPage.clickBtnLogin();
-        System.out.println("Шаг 1 - Добавить товар");
-        productsPage.addProduct(0);
-        System.out.println("Шаг 2 - Перейти в корзину");
-        BasketPage basketPage = productsPage.showBasket();
-        System.out.println("Шаг 3 - Нажать кнопку Continue Shopping");
-        basketPage.clickBtnContinue();
     }
 
 }
